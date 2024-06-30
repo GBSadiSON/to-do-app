@@ -114,7 +114,7 @@ body {
     height: 89vh;
     background-color: rgba(62, 62, 62, 0.9);
     color: white;
-    display: flex;
+    display: none;
     position: absolute;
     align-items: right;
     flex-direction: column;

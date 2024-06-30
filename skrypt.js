@@ -6,15 +6,21 @@ addEventListener("DOMContentLoaded", function () {
   hamburger_button.addEventListener("click", function () {
     if (active == 0) {
       hamburger_button.classList.add("menu-hamburger--active");
-      document
-        .querySelector(".popping-menu")
-        .classList.add("popping-menu--active");
+      document.querySelector(".popping-menu").style.display = "flex";
+      setTimeout(function () {
+        document
+          .querySelector(".popping-menu")
+          .classList.add("popping-menu--active");
+      }, 1);
       active = 1;
     } else {
       hamburger_button.classList.remove("menu-hamburger--active");
       document
         .querySelector(".popping-menu")
         .classList.remove("popping-menu--active");
+      setTimeout(function () {
+        document.querySelector(".popping-menu").style.display = "none";
+      }, 400);
       active = 0;
     }
   });

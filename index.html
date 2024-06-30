@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/import.css" />
+    <title>To do APP</title>
+  </head>
+  <body class="page">
+    <nav class="navbar page__navbar">
+      <div class="navbar__inputbox">
+        <input
+          class="navbar__input"
+          type="text"
+          placeholder="Enter your task: "
+        />
+        <button class="navbar__button">Apply</button>
+      </div>
+      <div class="menu navbar__menu">
+        <ul class="menu__list">
+          <li class="menu__item">Active</li>
+          <li class="menu__item">Done</li>
+          <li class="menu__item">Removed</li>
+        </ul>
+      </div>
+
+      <div class="menu-hamburger navbar__menu-hamburger">
+        <span class="menu__hamburger"></span>
+        <span class="menu__hamburger"></span>
+        <span class="menu__hamburger"></span>
+      </div>
+    </nav>
+
+    <div class="popping-menu">
+      <ul class="popping-menu__list">
+        <li class="popping-menu__item">Active</li>
+        <li class="popping-menu__item">Done</li>
+        <li class="popping-menu__item">Removed</li>
+      </ul>
+    </div>
+
+    <div class="main page__main">
+      <div class="main__active"></div>
+      <div class="main__done"></div>
+      <div class="main__removed"></div>
+
+      <div class="popup main__popup">
+        <h1 class="popup__header">Modify this task:</h1>
+        <div class="popup__buttonbox">
+          <button class="popup__button">It's done</button>
+          <button class="popup__button">Remove it</button>
+        </div>
+      </div>
+    </div>
+    <script src="skrypt.js"></script>
+  </body>
+</html>

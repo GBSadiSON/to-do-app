@@ -25,6 +25,32 @@ addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  //^                    WIDE MENU
+  let menu_wide_buttons = document.querySelectorAll(".menu__item");
+  menu_wide_buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      switch (button.innerHTML) {
+        case "Active":
+          console.log(button.innerHTML);
+          active_window.style.display = "flex";
+          done_window.style.display = "none";
+          removed_window.style.display = "none";
+          break;
+        case "Done":
+          console.log(button.innerHTML);
+          active_window.style.display = "none";
+          done_window.style.display = "flex";
+          removed_window.style.display = "none";
+          break;
+        case "Removed":
+          console.log(button.innerHTML);
+          active_window.style.display = "none";
+          done_window.style.display = "none";
+          removed_window.style.display = "flex";
+          break;
+      }
+    });
+  });
   let menu_items = document.querySelectorAll(".popping-menu__item");
   let active_window = document.querySelector(".main__active");
   let done_window = document.querySelector(".main__done");
@@ -85,8 +111,12 @@ addEventListener("DOMContentLoaded", function () {
       task_element.forEach(function (element) {
         element.addEventListener("click", function (event) {
           event.stopPropagation();
-          popup.style.display = "flex";
-          selected_element = element;
+          if (task_container.style.display == "flex") {
+            popup.style.display = "flex";
+            selected_element = element;
+          } else {
+            popup.style.display = "none";
+          }
         });
       });
     }

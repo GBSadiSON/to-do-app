@@ -111,7 +111,7 @@ addEventListener("DOMContentLoaded", function () {
       task_element.forEach(function (element) {
         element.addEventListener("click", function (event) {
           event.stopPropagation();
-          if (task_container.style.display == "flex") {
+          if (task_container.style.display != "none") {
             popup.style.display = "flex";
             selected_element = element;
           } else {
